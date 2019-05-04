@@ -1,0 +1,45 @@
+<div class="header">
+  <nav>
+    <a routerLink="/home" [routerLinkActive]="'active-route'">
+      <i class="material-icons"> home </i
+      ><small>
+        Home
+      </small></a
+    >
+    <a routerLink="/connect" [routerLinkActive]="'active-route'">
+      <i class="material-icons">
+        alternate_email
+      </i>
+      <small>
+        Connect
+      </small></a
+    >
+    <a routerLink="/discover" [routerLinkActive]="'active-route'">
+      <span style="font-size: 22px; padding-right: 3px;"> &#35;</span
+      ><small>
+        Discover
+      </small></a
+    >
+    <a routerLink="/me" [routerLinkActive]="'active-route'">
+      <i class="material-icons"> person </i
+      ><small>
+        Me
+      </small></a
+    >
+  </nav>
+  <div>
+    <img
+      src="assets/twitter-logo.svg"
+      alt="Twitter Logo"
+      width="42"
+      height="42"
+    />
+  </div>
+
+  <div class="search">
+    <input placeholder="Search" class="search__box" />
+    <i class="material-icons">
+      search
+    </i>
+  </div>
+</div>
