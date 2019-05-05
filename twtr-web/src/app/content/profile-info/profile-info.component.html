@@ -1,0 +1,50 @@
+<div class="profile">
+  <div class="profile__info">
+    <img class="profile__info__img" src="assets/rafael-nadal.jpg" alt="Nadal" />
+    <div class="profile__info__stats">
+      <div class="profile__info__stats__stat">
+        <span class="profile__info__stats__stat__name"> Tweets </span>
+        <strong>
+          36.3K
+        </strong>
+      </div>
+      <div class="profile__info__stats__divider"></div>
+      <div class="profile__info__stats__stat">
+        <span class="profile__info__stats__stat__name"> Following </span>
+        <strong>
+          369
+        </strong>
+      </div>
+      <div class="profile__info__stats__divider"></div>
+      <div class="profile__info__stats__stat">
+        <span class="profile__info__stats__stat__name"> Followers </span>
+        <strong>
+          99.9M
+        </strong>
+      </div>
+    </div>
+    <div class="profile__info__compose">
+      <input
+        class="profile__info__compose__textarea"
+        placeholder="Compose new Tweet..."
+        maxlength="60"
+      />
+    </div>
+  </div>
+  <div class="profile__trends">
+    <div class="profile__trends__title">
+      Trends for you .
+      <a routerLink="/settings"> change</a>
+    </div>
+    <ul class="profile__trends__list">
+      <li *ngFor="let trend of trends">
+        <a routerLink="/discover/{{ trend.id }}">{{ trend.name }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="profile__footer">
+    <a *ngFor="let item of footData" routerLink="/discover/{{ item }}">{{
+      item
+    }}</a>
+  </div>
+</div>

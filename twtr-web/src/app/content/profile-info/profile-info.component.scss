@@ -1,0 +1,137 @@
+@import '../../../utils/flexbox.scss';
+
+.link {
+  font-size: 12px;
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.box {
+  min-height: 75px;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 9px;
+}
+
+.profile {
+  width: 250px;
+  max-width: 250px;
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(space-between);
+
+  &__info {
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(center);
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    margin-bottom: 9px;
+
+    &__img {
+      border-radius: 5px 5px 0 0;
+      @include flex(1 160px);
+      height: 160px;
+    }
+
+    &__stats {
+      @include flexbox;
+      @include flex-direction(row);
+      @include flex(1 50px);
+      @include align-items(center);
+      background-color: white;
+
+      &__stat {
+        @include flexbox;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        @include align-content(space-around);
+        @include flex(33);
+        font-size: 14px;
+        padding-left: 9px;
+        color: #66757f;
+
+        &__name {
+          font-size: 12px;
+          color: #657786;
+        }
+      }
+
+      &__divider {
+        border: 0.3px solid #ededed;
+        height: 48px;
+        width: 0.3px;
+      }
+    }
+
+    &__compose {
+      @include flexbox;
+      @include flex-direction(row);
+      @include flex(1 50px);
+      @include align-items(center);
+      @include justify-content(center);
+
+      &__textarea {
+        width: 90%;
+        height: 30px;
+        border: 1px solid #ededed;
+        border-radius: 5px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          padding: 5px;
+        }
+      }
+    }
+  }
+
+  &__trends {
+    @extend .box;
+
+    &__title {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px 12px 1px 12px;
+
+      & > a {
+        @extend .link;
+      }
+    }
+
+    &__list {
+      list-style-type: none;
+
+      & > li {
+        line-height: 12px;
+        margin-bottom: 10px;
+
+        & > a {
+          @extend .link;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    @extend .box;
+    background-color: #fff;
+    padding: 15px 9px;
+    @include flexbox;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    & > a {
+      padding: 0 7px;
+      @extend .link;
+      color: #657786;
+
+      &:hover {
+        color: #1da1f2;
+      }
+    }
+  }
+}

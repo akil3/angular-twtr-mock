@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { ContentComponent } from './content/content.component';
 
 export const routes: Routes = [
   {
@@ -9,7 +10,7 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    component: AppComponent
+    component: ContentComponent
   },
   {
     path: 'connect',
@@ -32,7 +33,7 @@ export const routes: Routes = [
     component: AppComponent
   },
   {
-    path: 'discover',
+    path: 'discover/:id',
     component: AppComponent
   }
 ];

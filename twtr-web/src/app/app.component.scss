@@ -1,3 +1,22 @@
-.app-container {
+@import '../utils/flexbox.scss';
+
+.app {
   height: 100%;
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-content(center);
+  @include align-items(center);
+
+  &__header {
+    height: 48px;
+    padding-bottom: 12px;
+  }
+
+  &__content {
+    width: 100%;
+    height: calc(100% - 48px);
+    min-height: calc(100% - 48px);
+    max-width: 960px;
+  }
 }

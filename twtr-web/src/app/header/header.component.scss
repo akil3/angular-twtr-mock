@@ -73,6 +73,10 @@ nav {
     &:focus {
       outline: none;
     }
+
+    &::placeholder {
+      color: #fff;
+    }
   }
 
   &__icon {
