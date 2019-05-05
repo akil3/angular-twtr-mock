@@ -9,6 +9,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  color: black;
+  font-size: 12px;
 }
 
 * {
@@ -18,4 +20,8 @@ body {
 
 :root {
   --twitter-blue: #1da1f2;
+}
+
+::placeholder {
+  color: #fff;
 }

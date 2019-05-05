@@ -20,6 +20,18 @@ export const routes: Routes = [
     component: AppComponent
   },
   {
+    path: 'messages',
+    component: AppComponent
+  },
+  {
+    path: 'settings',
+    component: AppComponent
+  },
+  {
+    path: 'compose',
+    component: AppComponent
+  },
+  {
     path: 'discover',
     component: AppComponent
   }

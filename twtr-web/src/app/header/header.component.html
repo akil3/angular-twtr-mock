@@ -27,7 +27,7 @@
       </small></a
     >
   </nav>
-  <div>
+  <div class="twtr-logo">
     <img
       src="assets/twitter-logo.svg"
       alt="Twitter Logo"
@@ -38,8 +38,23 @@
 
   <div class="search">
     <input placeholder="Search" class="search__box" />
-    <i class="material-icons">
+    <i class="material-icons search__icon">
       search
     </i>
   </div>
+
+  <nav>
+    <a routerLink="/messages" [routerLinkActive]="'active-route'">
+      <i class="material-icons"> email </i></a
+    >
+    <a routerLink="/settings" [routerLinkActive]="'active-route'">
+      <i class="material-icons">
+        settings
+      </i>
+    </a>
+
+    <a routerLink="/compose" [routerLinkActive]="'active-route'">
+      <i class="material-icons"> rate_review </i></a
+    >
+  </nav>
 </div>
