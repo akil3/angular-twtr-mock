@@ -1,3 +1,58 @@
-<p>
-  tweets works!
-</p>
+<div class="twt">
+  <div class="twt__title">
+    Tweets
+  </div>
+  <div class="twt__divider"></div>
+  <div class="twt__tweets" *ngFor="let tweet of tweets">
+    <img
+      class="twt__tweets__img"
+      src="{{ tweet.profImg }}"
+      alt="{{ tweet.user }}"
+    />
+
+    <div class="twt__tweets__body">
+      <div class="twt__tweets__body__ntt">
+        <strong class="twt__tweets__body__ntt__name">
+          {{ tweet.user }} &nbsp;
+        </strong>
+        <span class="twt__tweets__body__ntt__tag">
+          {{ tweet.userTag }}
+        </span>
+        <span class="twt__tweets__body__ntt__ts">
+          {{ tweet.ts }}
+        </span>
+      </div>
+      <p
+        class="twt__tweets__body__text"
+        innerHTML="{{ tweet.tweet | parsetweet }}"
+      ></p>
+      <div class="twt__tweets__body__actions">
+        <button name="Reply" type="button">
+          <i class="material-icons">
+            reply
+          </i>
+        </button>
+        <button name="Retweet" type="button">
+          <i class="material-icons">
+            repeat
+          </i>
+        </button>
+        <button name="Like" type="button">
+          <i class="material-icons twt__tweets__body__actions__like">
+            favorite
+          </i>
+        </button>
+        <button name="Direct Reply" type="button">
+          <i class="material-icons">
+            message
+          </i>
+        </button>
+        <button name="Direct Reply" type="button">
+          <i class="material-icons">
+            more_horiz
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

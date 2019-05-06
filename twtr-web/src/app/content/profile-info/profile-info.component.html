@@ -5,14 +5,14 @@
       <div class="profile__info__stats__stat">
         <span class="profile__info__stats__stat__name"> Tweets </span>
         <strong>
-          36.3K
+          2,769
         </strong>
       </div>
       <div class="profile__info__stats__divider"></div>
       <div class="profile__info__stats__stat">
         <span class="profile__info__stats__stat__name"> Following </span>
         <strong>
-          369
+          100
         </strong>
       </div>
       <div class="profile__info__stats__divider"></div>
@@ -26,9 +26,20 @@
     <div class="profile__info__compose">
       <input
         class="profile__info__compose__textarea"
+        [(ngModel)]="composedTweet"
         placeholder="Compose new Tweet..."
         maxlength="60"
       />
+      <button
+        *ngIf="composedTweet.length > 0"
+        (click)="postTweet()"
+        name="Post"
+        type="button"
+      >
+        <i class="material-icons">
+          rate_review
+        </i>
+      </button>
     </div>
   </div>
   <div class="profile__trends">

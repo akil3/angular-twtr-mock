@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tweet } from '../../interfaces/twtr.interface';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-content',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
+  tweet = new BehaviorSubject({});
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  tweeted(tdata) {
+    this.tweet.next(tdata);
   }
-
 }

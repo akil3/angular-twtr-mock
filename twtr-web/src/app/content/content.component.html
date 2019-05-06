@@ -1,8 +1,8 @@
 <div class="content">
   <div class="content__profile">
-    <app-profile-info></app-profile-info>
+    <app-profile-info (tweetPosted)="tweeted($event)"></app-profile-info>
   </div>
   <div class="content__tweets">
-    <app-tweets></app-tweets>
+    <app-tweets [newTweet]="tweet"></app-tweets>
   </div>
 </div>
